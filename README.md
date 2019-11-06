@@ -22,7 +22,7 @@ Application Structure
 
 + __.envs__ - The .envs directory contains example environment variables. See ".envs/.postgres" for postgresql database settings
 
-+ __Pipfile__ & __Pipfile.lock__ - are  `pipenv` specific file
++ __Pipfile__ & __Pipfile.lock__ - are  `pipenv` specific file. If you use `pipenv` for virtual environment management, then you need these files to create virtual environment.
 
 How to setup?
 -------------
