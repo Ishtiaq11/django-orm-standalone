@@ -9,8 +9,7 @@ Requirements
 This repository doesn't ship with a django installation. The system must have an
 existing django installation so that we can safely import required modules. A
 django app is absolutely not required. Among other requirements is the db
-backend. If you're planning to use mysql or pgsql - please make sure you have
-all dependencies met. This works for Django version 2.2.
+backend. This project is configured for using postgres database. This works for Django version 2.2.
 
 
 Application Structure
@@ -27,12 +26,12 @@ How to setup?
 + Change to your project directory
 + Create a new python3 virtualenv: `python3 -m venv .env`
 + Activate the virtualenv: `source .env/bin/activate`
-+ Install Django: `pip install django`
++ Install Dependies: `pip install -r requirements.txt`
 
 How to use?
 -----------
 + Generate a new `SECRET_KEY` for your settings.py.
-+ Modify settings.py to add your database connection parameters.
++ Create and Modify .env file to add your database connection parameters (See .envs/.postgres for examplle).
 + Open "data/models.py". Modify existing model or add your own.
 + Run `python manage.py makemigrations` to make migration scripts
 + Run `python manage.py migrate` to create the tables and sync db changes. Feel free to use other manage.py commands available for django orm.
