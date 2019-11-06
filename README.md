@@ -20,6 +20,10 @@ Application Structure
 
 + __data__ - The data directory works as a django application and contains the models.py which is where you put your models according to django conventions
 
++ __.envs__ - The .envs directory contains example environment variables. See ".envs/.postgres" for postgresql database settings
+
++ __Pipfile__ & __Pipfile.lock__ - are  `pipenv` specific file
+
 How to setup?
 -------------
 + git clone the source as a starting point
@@ -31,7 +35,7 @@ How to setup?
 How to use?
 -----------
 + Generate a new `SECRET_KEY` for your settings.py.
-+ Create and Modify .env file to add your database connection parameters (See .envs/.postgres for examplle).
++ Create and Modify `.env` file to add your database connection parameters (See ".envs/.postgres" for examplle).
 + Open "data/models.py". Modify existing model or add your own.
 + Run `python manage.py makemigrations` to make migration scripts
 + Run `python manage.py migrate` to create the tables and sync db changes. Feel free to use other manage.py commands available for django orm.
