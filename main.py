@@ -9,13 +9,13 @@ application = get_wsgi_application()
 # Your application specific imports
 from data.models import *
 
+if __name__ == "__main__":
+    #Add user
+    user = User(name="masnun", email="masnun@gmail.com")
+    user.save()
 
-#Add user
-user = User(name="masnun", email="masnun@gmail.com")
-user.save()
+    # Application logic
+    first_user = User.objects.all()[0]
 
-# Application logic
-first_user = User.objects.all()[0]
-
-print(first_user.name)
-print(first_user.email)
+    print(first_user.name)
+    print(first_user.email)
